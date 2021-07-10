@@ -1,4 +1,6 @@
-# INPUT FUNCTION
+# -------------------------------------------------------------------------------
+
+# Type Conversion - and the 'input' function
 
 # we use the 'input' fuction to get input from the user:
 
@@ -32,5 +34,5 @@ print(f"x: {x}, y: {y}")
 # Falsy: "", 0, None
 # Trucy: Everything Else!
 
-#QUIZ QUESTION: What are the 3 Primitive Types in Python:
+# QUIZ QUESTION: What are the 3 Primitive Types in Python:
 # STRINGS, NUMBERS, BOOLEANS
