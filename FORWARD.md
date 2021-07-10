@@ -1,4 +1,4 @@
-_FOREWORD_
+# FORWARD #
 
 This repository is by no means intended to be a ripoff, clone, carbon copy of, etc...
 Where credit is earned, credit is given.
@@ -22,6 +22,3 @@ only help ONE individual on their path to success, I've done what I came to do.
 
 As a teacher, a leader, and a role model for the entirety of the human race, my good pal
 Mosh Hamedani should be celebrated.
----\*\*\*---
-
-_END_

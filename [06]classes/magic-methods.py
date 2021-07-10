@@ -7,8 +7,8 @@
 
 class Point:
     # Here's a 'magic method':
-    # This, and many other magic methods, are already assigned as methods to 
-    # classes we create in Python. 
+    # This, and many other magic methods, are already assigned as methods to
+    # classes we create in Python.
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -21,13 +21,14 @@ class Point:
 # So, we define this 'point' variable, and it in we are storing our 'Point'
 # object....  Let's print our variable and see what we get:
 
+
 point = Point(1, 2)
 print(point)
 '''
 RESULT:
 <__main__.Point object at 0x107edafa0>
 '''
-# This returns the name of our module, followed by the class name, then the 
+# This returns the name of our module, followed by the class name, then the
 # address of this point object in memory
 
 # NOTE: THIS IS THE DEFAULT IMPLEMENTATION OF THE '__str__' METHOD IN OUR
@@ -65,6 +66,8 @@ point.__str__
 # all about 'inheritence' in a later lecture.
 
 # So, back to our class from above:
+
+
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -74,7 +77,7 @@ class Point:
     # we will use the '__str__' magic method.
     # NOTE: THIS WILL CHANGE THE DEFAULT IMPLEMENTATION OF '__str__' to the
     # formatted string we have just defined within the our 'Point' class.
-    # This is super important, and super powerful, conceptually. 
+    # This is super important, and super powerful, conceptually.
     def __str__(self):
         return f"({self.x}, {self.y})"
 
@@ -82,7 +85,7 @@ class Point:
         print(f"Point ({self.x}, {self.y})")
 
 
-point = Point(1, 2)
+aspoint = Point(1, 2)
 print(point)
 '''
 RESULT:

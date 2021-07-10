@@ -13,10 +13,10 @@
 
 +class TagCloud:
 
-# Because this class is a container, it supports various operations involving
-# containers. Here are those operations:
+    # Because this class is a container, it supports various operations involving
+    # containers. Here are those operations:
 
-# Get the number of items in this container:
+    # Get the number of items in this container:
 len(cloud)
 # Get an item by it's key, and also set it:
 cloud["python"] = 10
@@ -28,11 +28,13 @@ for tag in cloud:
 #--------##--------##--------##--------##--------##--------##--------##--------#
 
 # Mosh's 'from the bottom up' implementation of a class like this:
+
+
 class TagCloud:
     # Internally (within our class), we will be using one of the built-in date
     # structures - lists, dict's, etc. In this case, we will use a dictionary,
     # because it will allow us to easily get the nymber of a given tag.
-    def __init__(self): # <- remember, this is our 'constructor'
+    def __init__(self):  # <- remember, this is our 'constructor'
         self.tags = {}  # <- let's set the 'tags' attribute to an empty dict.
 
     # Now, we can optionally add a method that takes a tag:
@@ -45,6 +47,7 @@ class TagCloud:
         # that tag's count by one - so, there would now be one more tag of that
         # specific name. Pretty simple. Here's one way to implement that code:
         self.tags[tag] = self.tags.get(tag, 0) + 1
+
 
 # And finally, let's pass a reference to the 'TagCloud' class, then call it's
 # 'add' method 3 times - just to test our implementation of the 'add' method.
@@ -70,14 +73,15 @@ RESULT:
 # executed as such within our class, as is. To implement 'case INsensitivity,
 # we need to write in some code:
 
+
 class TagCloud:
-    
+
     def __init__(self):
         self.tags = {}
-    
+
     def add(self, tag):
         # Right Here: To handle case sensitivity, we need to convert the tag
-        # to lowercase when setting it, and also when reading it. 
+        # to lowercase when setting it, and also when reading it.
         self.tags[tag.lower()] = self.tags.get(tag.lower(), 0) + 1
 
 
@@ -104,29 +108,33 @@ RESULT:
 # like this: cloud["python"] -- To do this, we need to implement a mogic
 # method called '__getitem__'. Let's bring down the code once more:
 
+
 class TagCloud:
-    
+
     def __init__(self):
         self.tags = {}
-    
+
     def add(self, tag):
         self.tags[tag.lower()] = self.tags.get(tag.lower(), 0) + 1
 
     def __getitem__(self, tag):
         return self.tags.get(tag.lower(), 0)
     # With this current implementation of '__getitem__', we can only READ the
-    # item. We cannot SET it. To do this, we have to implement yet another 
+    # item. We cannot SET it. To do this, we have to implement yet another
     # magic method, called - you know it! - '__setitem__'. This magic method
     # take three (3) parameters - self, key, value. In this case, our 'key'
     # is 'tag', and our 'value' is 'count':
+
     def __setitem__(self, tag, count):
         self.tags[tag.lower()] = count
     # Now, in order to get the number of items in this tag cloud, we need to
     # again import a magic method - '__len__':
+
     def __len__(self):
         return len(self.tags)
     # And FINALLY, to make this ITERABLE - so we can iterate over it with a
     # 'for' loop - we need to import one more magic method, '__iter__'.
+
     def __iter__(self):
         # Now, here, all we have to do is use one of the built-in functions
         # to get an 'iterator object'. An iterator object is an object that
@@ -138,6 +146,7 @@ class TagCloud:
         return iter(self.tags)
 
 #--------##--------##--------##--------##--------##--------##--------##--------#
+
 
 '''
 NOTE: 
@@ -166,4 +175,3 @@ NOTE:
     }
 
 '''
-
