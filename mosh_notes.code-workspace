@@ -1,0 +1,38 @@
+{
+"folders": [
+{
+"path": "."
+}
+],
+"settings": {
+    "python.defaultInterpreterPath": "python3",
+"vsintellicode.features.python.deepLearning": "enabled",
+"vsintellicode.python.completionsEnabled": true,
+"workbench.editor.showIcons": true,
+"bracket-pair-colorizer-2.rulerPosition": "Full",
+"bracket-pair-colorizer-2.showBracketsInGutter": true,
+"bracket-pair-colorizer-2.showBracketsInRuler": true,
+"bracket-pair-colorizer-2.activeScopeCSS": [
+"borderStyle : solid",
+"borderWidth : 0.3px",
+"borderColor : {color}",
+"opacity: 0.5"
+],
+"bracket-pair-colorizer-2.colors": [
+"Blue",
+"Orange",
+"LimeGreen"
+],
+"terminal.integrated.profiles.osx": {
+"zsh": {
+"path": "/bin/zsh",
+"args": [],
+"icon": "thumbsup",
+"color": "terminal.ansiMagenta"
+},
+},
+"terminal.integrated.defaultProfile.osx": "zsh",
+"terminal.integrated.enableBell": true,
+"terminal.integrated.fontSize": 14
+}
+}
